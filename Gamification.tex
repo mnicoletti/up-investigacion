@@ -2,10 +2,6 @@
 
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{footnote}
-\usepackage{hyperref}
 
 \setlength{\parskip}{\baselineskip}
 
@@ -19,6 +15,7 @@
 
 \maketitle
 
+% Idea de la investigación: Esta sección será retirada en la versión final del trabajo, al incluir Abstract, Introducción y Conclusiones.
 \section{\textbf{\Large Idea}}
 
 El objetivo principal es el de extraer datos de indicadores de performance (\textit{KPI}\footnote{Key Performance Indicators}) de procesos de automatización, integración y despliegue continuo (CI/CD\footnote{Continuous Integration/Continuous Delivery}) en equipos \textit{DevOps}, y utilizarlos para la creación de un sistema de gamificación que permita a las áreas de \textit{management} obtener información en tiempo real sobre el estado de los proyectos y la performance de los equipos de trabajo, en una plataforma unificada y amigable para la visualización de datos.
@@ -34,16 +31,22 @@ Esta plataforma debería permitir:
 
 Para el desarrollo teórico de esta idea, identificaremos los conceptos básicos de gamificación, las prácticas de análisis continuo del \textit{feedback} en la cultura de trabajo \textit{DevOps} y, posteriormente, la extracción de todos los datos identificados como \textit{KPI} para la creación de un nuevo sistema de visualización gamificado, que permita a los líderes de la organización tomar decisiones.
 
+% Sección 1: Marco Teórico
 \section{\textbf{\Large Marco Teórico}}
 
+En esta sección identificaremos los conceptos que abarcarán el total de la investigación, desde los pilares de la cultura \textit{DevOps}, identificando la importancia de una correcta visualización de los indicadores de performance, y el concepto de gamificación como herramienta de visualización. La revisión de estos conceptos permitirá definir la base teórica para la implementación de la plataforma propuesta.
+
+% Sección 1.1: Fundamentos de DevOps y Automatización
 \subsection{\textbf{Fundamentos de DevOps y Automatización}}
 
-\textit{Desarrollo esperado:} Se explicará la filosofía \textit{DevOps}, resaltando la importancia de la colaboración entre equipos y la automatización en los procesos de CI/CD, enfatizando que \textbf{``La automatización es clave en la cultura DevOps''}.
 
+
+% Sección 1.2: Principios de Gamificación en Entornos Empresariales
 \subsection{\textbf{Principios de Gamificación en Entornos Empresariales}}
 
 \textit{Desarrollo esperado:} Se definirán los elementos de gamificación y su aplicabilidad en ambientes de trabajo, incluyendo la influencia de sistemas de juego como los \textbf{dados de 20 caras} en la promoción de la innovación.
 
+% Sección 1.3: Importancia de los KPIs en DevOps
 \subsection{\textbf{Importancia de los KPIs en DevOps}}
 
 \textit{Desarrollo esperado:} Se explicará qué son los \textit{KPIs} y su papel en la medición del rendimiento en equipos \textit{DevOps}. Se resaltará que \textbf{``Un dato aislado no provee contexto''}, subrayando la necesidad de analizar múltiples indicadores para obtener una visión completa.
@@ -76,15 +79,18 @@ Ejemplos de \textit{KPIs} relevantes incluyen:
     \textit{Ejemplo:} Mantener una disponibilidad del 99.9\% demuestra compromiso con la calidad y eficiencia en la gestión de infraestructuras.
 \end{itemize}
 
+% Sección 2: Situación Actual y Desafíos en Equipos DevOps
 \section{\textbf{\Large Situación Actual y Desafíos en Equipos DevOps}}
 
 \textbf{Resumen:} Se analizará la situación actual de los equipos \textit{DevOps}, identificando las complicaciones existentes en la interpretación de datos y en la colaboración entre equipos.
 
-\subsection{\textbf{ Importancia de los KPIs y Desafíos en su Interpretación}}
+% Sección 2.1: Importancia de los KPIs y Desafíos en su Interpretación
+\subsection{\textbf{Importancia de los KPIs y Desafíos en su Interpretación}}
 
 \textit{Desarrollo esperado:} Se analizará cómo los \textit{KPIs} son esenciales para medir el rendimiento y se discutirán las dificultades que enfrentan los equipos al interpretar datos aislados, reforzando la idea de que \textbf{``Un dato aislado no provee contexto''}. Se explorará cómo la falta de contexto puede llevar a decisiones erróneas.
 
-\subsection{\textbf{ Brecha entre Equipos de Desarrollo y Operaciones}}
+% Sección 2.2: Brecha entre Equipos de Desarrollo y Operaciones
+\subsection{\textbf{Brecha entre Equipos de Desarrollo y Operaciones}}
 
 \textit{Desarrollo esperado:} Se explorará el \textit{gap} de conocimiento entre los equipos, y cómo afecta la eficiencia y la toma de decisiones estratégicas. Se destacará la necesidad de una comunicación efectiva y colaboración para superar esta brecha, enfatizando además en la necesidad de que los mandos intermedios actúen como facilitadores.
 
@@ -100,15 +106,18 @@ Un caso de estudio relevante es:
     \textit{Relevancia:} Destaca la importancia de la automatización y procesos CI/CD integrados para reducir el \textit{gap}.
 \end{itemize}
 
+% Sección 3: Gamificación como Herramienta de Mejora
 \section{\textbf{\Large Gamificación como Herramienta de Mejora}}
 
 \textbf{Resumen:} Esta sección explora la pregunta de cómo la gamificación puede resolver las complicaciones identificadas en la sección anterior. Se presentará la gamificación como respuesta, destacando cómo promueve la competitividad y la innovación.
 
-\subsection{\textbf{ Integración de Gamificación en Equipos de Trabajo}}
+% Sección 3.1: Integración de Gamificación en Equipos de Trabajo
+\subsection{\textbf{Integración de Gamificación en Equipos de Trabajo}}
 
 \textit{Desarrollo esperado:} Se analizará cómo la gamificación puede ser aplicada en entornos \textit{DevOps} para mejorar el compromiso y la colaboración. Se enfatizará que \textbf{``La competitividad es promotora de la innovación''}, mostrando ejemplos de cómo los desafíos y competencias pueden impulsar el rendimiento.
 
-\subsection{\textbf{ Diseño Conceptual de la Plataforma}}
+% Sección 3.2: Diseño Conceptual de la Plataforma
+\subsection{\textbf{Diseño Conceptual de la Plataforma}}
 
 \textit{Desarrollo esperado:} Se describirá cómo la plataforma integrará la visualización de \textit{KPIs} en un entorno lúdico, facilitando la comprensión y promoviendo la competitividad.
 
@@ -124,19 +133,23 @@ Elementos de gamificación considerados:
     \textit{Beneficio:} Fomenta una competencia saludable que impulsa la innovación y mejora del rendimiento.
 \end{itemize}
 
+% Sección 4: Implementación y Funcionamiento de la Plataforma
 \section{\textbf{\Large Implementación y Funcionamiento de la Plataforma}}
 
 \textbf{Resumen:} Se explicará en detalle cómo se extraerán y utilizarán los datos de \textit{KPIs}, y cómo funcionará la plataforma en la práctica.
 
-\subsection{\textbf{ Extracción y Análisis de Datos de KPIs}}
+% Sección 4.1: Extracción y Análisis de Datos de KPIs
+\subsection{\textbf{Extracción y Análisis de Datos de KPIs}}
 
 \textit{Desarrollo esperado:} Se describirá el proceso de extracción de datos de los procesos CI/CD y cómo estos pueden ser transformados en indicadores útiles. Se abordará la necesidad de automatización en este proceso para asegurar datos en tiempo real.
 
-\subsection{\textbf{ Interfaz de Usuario y Experiencia Lúdica}}
+% Sección 4.2: Interfaz de Usuario y Experiencia Lúdica
+\subsection{\textbf{Interfaz de Usuario y Experiencia Lúdica}}
 
 \textit{Desarrollo esperado:} Se describirá la interfaz de la plataforma, haciendo referencia a elementos como los \textbf{juegos de dados de 20 caras} para hacer la experiencia más atractiva. Se propondrán interfaces interactivas y elementos de juego que faciliten la comprensión y el seguimiento del rendimiento.
 
-\subsection{\textbf{ Herramientas para Líderes y Mandos Medios}}
+% Sección 4.3: Herramientas para Líderes y Mandos Medios
+\subsection{\textbf{Herramientas para Líderes y Mandos Medios}}
 
 \textit{Desarrollo esperado:} Se presentarán las funcionalidades que permitirán a los líderes tomar decisiones estratégicas basadas en la información proporcionada.
 
@@ -152,26 +165,32 @@ Aplicación en la plataforma:
     \textit{Beneficio:} Alinea las actividades diarias con la estrategia general de la organización.
 \end{itemize}
 
+% Sección 5: Impacto en la Organización y Beneficios Esperados
 \section{\textbf{\Large Impacto en la Organización y Beneficios Esperados}}
 
 \textbf{Resumen:} Esta sección analiza las implicaciones de implementar la plataforma propuesta, incluyendo los beneficios para la organización y posibles desafíos a considerar.
 
-\subsection{\textbf{ Fomento de una Cultura de Innovación}}
+% Sección 5.1: Fomento de una Cultura de Innovación
+\subsection{\textbf{Fomento de una Cultura de Innovación}}
 
 \textit{Desarrollo esperado:} Se destacará cómo la gamificación y la competencia saludable pueden promover una cultura de innovación continua dentro de los equipos \textit{DevOps}.
 
-\subsection{\textbf{ Alineación con Objetivos Estratégicos}}
+% Sección 5.2: Alineación con Objetivos Estratégicos
+\subsection{\textbf{Alineación con Objetivos Estratégicos}}
 
 \textit{Desarrollo esperado:} Se explicará cómo la información proporcionada por la plataforma ayuda a los líderes a alinear las acciones de los equipos con los objetivos estratégicos de la organización.
 
-\subsection{\textbf{ Reducción del \textit{Gap} entre Equipos}}
+% Sección 5.3: Reducción del Gap entre Equipos
+\subsection{\textbf{Reducción del \textit{Gap} entre Equipos}}
 
 \textit{Desarrollo esperado:} Se analizará cómo la plataforma ayuda a reducir la brecha de conocimiento entre desarrollo y operaciones, y entre niveles de experiencia, proveyendo al liderazgo de una visión más completa y facilitando la provisión de herramientas de apoyo en \textit{onboarding} y capacitación.
 
+% Sección 6: Retos y Consideraciones para la Implementación
 \section{\textbf{\Large Retos y Consideraciones para la Implementación}}
 
 \textbf{Resumen:} Se identificarán posibles desafíos en la implementación y se propondrán soluciones.
 
+% Sección 6.1: Resistencia al Cambio y Cultura Organizacional
 \subsection{\textbf{ Resistencia al Cambio y Cultura Organizacional}}
 
 \textit{Desarrollo esperado:} Se abordarán las posibles resistencias internas y cómo superarlas.
@@ -186,10 +205,12 @@ Ejemplo:
     \textit{Superación:} Involucrar a los empleados en el proceso de cambio, escuchando sus preocupaciones y ajustando el plan según sea necesario.
 \end{itemize}
 
+% Sección 6.2: Implicaciones Éticas y de Privacidad
 \subsection{\textbf{ Implicaciones Éticas y de Privacidad}}
 
 \textit{Desarrollo esperado:} Se analizarán consideraciones éticas relacionadas con la competencia entre equipos y el manejo de datos sensibles, asegurando que la plataforma promueva un entorno de trabajo positivo.
 
+% Sección 6.3: Escalabilidad y Mantenimiento de la Plataforma
 \subsection{\textbf{ Escalabilidad y Mantenimiento de la Plataforma}}
 
 \textit{Desarrollo esperado:} Se analizarán los aspectos técnicos para garantizar el funcionamiento continuo y la adaptación futura de la plataforma.
@@ -204,6 +225,7 @@ Herramientas de código abierto como base:
     \textit{Aplicación:} Crear \textit{dashboards} gamificados sobre Grafana, incorporando \textit{plugins} o desarrollos que añadan elementos lúdicos.
 \end{itemize}
 
+% Sección de Citas. Esta sección se completará con la investigación bibliográfica una vez finalizado el paper, y se incluirá en la versión final del trabajo.
 \section{\textbf{\Large \textbf{\Large Investigación bibliografica}}}
 \subsection{\textbf{ \textbf{\large Libros}}}
 
