@@ -2,6 +2,9 @@
 
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{hyperref}
 
 \setlength{\parskip}{\baselineskip}
 
@@ -39,8 +42,24 @@ En esta sección identificaremos los conceptos que abarcarán el total de la inv
 % Sección 1.1: Fundamentos de DevOps y Automatización
 \subsection{\textbf{Fundamentos de DevOps y Automatización}}
 
+\begin{tcolorbox}[colback=gray!10, colframe=black, left=2mm, right=2mm]
+    \small % Reduce el tamaño de la fuente ligeramente
+    \ttfamily % Aplica la fuente monoespaciada
+    \raggedright % Alinea el texto a la izquierda sin justificar
+    Mientras que las bases de \textit{DevOps} se pueden ver como derivados de \textbf{LEAN}, \textbf{la teoría de las restricciones} y el movimiento \textbf{Toyota Kata}, muchos también ven a \textit{DevOps} como una continuación lógica al camino del software Agile que inició en el año 2001 \cite{kim2021devops}.
+    \end{tcolorbox}
 
+La cultura \textit{DevOps} está basada en la colaboración entre todos los actores de los equipos de desarrollo y operaciones, mejorando la productividad y la calidad de los productos. Y, si bien hoy podemos estar acostumbrados a describir \textit{DevOps} como un conjunto de herramientas con nombre propio que se utilizan para la automatización de procesos, a la vez que no existe una definición única de \textit{DevOps}.
+Lo que podemos afirmar sobre \textit{DevOps} es que utiliza una combinación de cambios culturales y estrategias tecnológicas para llevar a cabo los objetivos en los que se basa, mencionados anteriormente.
+De acuerdo con Gene Kim et al. en sus libros \textit{The DevOps Handbook} \cite{kim2021devops} y \textit{The Phoenix Project} \cite{kim2018phoenix}, es posible identificar tres principios bajo los que enmarcar todos los patrones y conductas que se observan en la adopción de \textit{DevOps}:
+\begin{enumerate}
+    \item \textbf{El principio del flujo}\cite[Part 1.2: The First Way: The Principles of Flow]{kim2021devops}: En este primer principio, se busca disminuir el tiempo en la puesta en producción de un cambio, para lo que buscamos visualizar el trabajo que se está realizando, limitar el \textbf{WIP}\footnote{Work In Process (Trabajo en Proceso)} y reducir el tamaño de "lotes" de trabajo.
+    \item \textbf{El principio del feedback}\cite[Part 1.3: The Second Way: The Principles of Feedback]{kim2021devops}: Al trabajar con sistemas complejos, cobra especial importancia una retroalimentación rápida y efectiva, aumentando la cantidad y calidad de información que permita identificar y hasta predecir posibles fallas. Este segundo principio busca atacar los problemas al mismo tiempo que están ocurriendo para construir conocimiento constantemente y optimizar cada proceso.
+    \item \textbf{El principio de la experimentación y aprendizaje continuo}\cite[Part 1.4: The Third Way: The Principles of Continual Learning and Experimentation]{kim2021devops}: En el tercer principio, buscamos crear una cultura donde la experimentación y el aprendizaje continuo sean la norma. Entre muchos otros formatos, este último principio refleja específicamente el papel que debe tener un líder, no solo como hacedor de objetivos y roadmaps, sino también como facilitador del aprendizaje continuo.
+\end{enumerate}
 
+% Al avanzar en el paper es posible que esta sección desaparezca y termine en la introducción.
+Si bien cada principio de esta breve definición de la cultura \textit{DevOps} funciona de forma autónoma, es fácilmente observable el papel de retroalimentación que juega cada uno de ellos en el resto, y es sobre esta serie de principios que plantearemos los objetivos de nuestra solución: la obtención de datos de indicadores dentro de nuestro flujo de trabajo, el constante feedback de estos datos a nuestra plataforma, y la visualización de estos datos para el beneficio conjunto de los equipos de trabajo y los líderes de la organización.
 % Sección 1.2: Principios de Gamificación en Entornos Empresariales
 \subsection{\textbf{Principios de Gamificación en Entornos Empresariales}}
 
