@@ -28,3 +28,16 @@ Ejemplos de \textit{KPIs} relevantes incluyen:
     
     \textit{Ejemplo:} Mantener una disponibilidad del 99.9\% demuestra compromiso con la calidad y eficiencia en la gestión de infraestructuras.
 \end{itemize}
+
+## Casos de Estudio
+Un caso de estudio relevante es:
+
+\begin{itemize}
+    \item \textbf{Retrasos en el Despliegue por Procesos Manuales}
+    
+    \textit{Descripción:} El equipo de desarrollo completa nuevas funcionalidades, pero el equipo de operaciones tiene procedimientos manuales y lentos para el despliegue.
+    
+    \textit{Impacto:} El tiempo de comercialización se incrementa, dando ventaja a competidores más ágiles.
+    
+    \textit{Relevancia:} Destaca la importancia de la automatización y procesos CI/CD integrados para reducir el \textit{gap}.
+\end{itemize}
