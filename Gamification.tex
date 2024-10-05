@@ -47,7 +47,7 @@ En esta sección identificaremos los conceptos que abarcarán el total de la inv
     \ttfamily % Aplica la fuente monoespaciada
     \raggedright % Alinea el texto a la izquierda sin justificar
     Mientras que las bases de \textit{DevOps} se pueden ver como derivados de \textbf{LEAN}, \textbf{la teoría de las restricciones} y el movimiento \textbf{Toyota Kata}, muchos también ven a \textit{DevOps} como una continuación lógica al camino del software Agile que inició en el año 2001 \cite{kim2021devops}.
-    \end{tcolorbox}
+\end{tcolorbox}
 
 La cultura \textit{DevOps} está basada en la colaboración entre todos los actores de los equipos de desarrollo y operaciones, mejorando la productividad y la calidad de los productos. Y, si bien hoy podemos estar acostumbrados a describir \textit{DevOps} como un conjunto de herramientas con nombre propio que se utilizan para la automatización de procesos, a la vez que no existe una definición única de \textit{DevOps}.
 Lo que podemos afirmar sobre \textit{DevOps} es que utiliza una combinación de cambios culturales y estrategias tecnológicas para llevar a cabo los objetivos en los que se basa, mencionados anteriormente.
@@ -61,47 +61,33 @@ De acuerdo con Gene Kim et al. en sus libros \textit{The DevOps Handbook} \cite{
 % Al avanzar en el paper es posible que esta sección desaparezca y termine en la introducción.
 Si bien cada principio de esta breve definición de la cultura \textit{DevOps} funciona de forma autónoma, es fácilmente observable el papel de retroalimentación que juega cada uno de ellos en el resto, y es sobre esta serie de principios que plantearemos los objetivos de nuestra solución: la obtención de datos de indicadores dentro de nuestro flujo de trabajo, el constante feedback de estos datos a nuestra plataforma, y la visualización de estos datos para el beneficio conjunto de los equipos de trabajo y los líderes de la organización.
 % Sección 1.2: Principios de Gamificación en Entornos Empresariales
-\subsection{\textbf{Principios de Gamificación en Entornos Empresariales}}
+\subsection{\textbf{Principios de Gamificación}}
 
-\textit{Desarrollo esperado:} Se definirán los elementos de gamificación y su aplicabilidad en ambientes de trabajo, incluyendo la influencia de sistemas de juego como los \textbf{dados de 20 caras} en la promoción de la innovación.
+\begin{tcolorbox}[colback=gray!10, colframe=black, left=2mm, right=2mm]
+    \small % Reduce el tamaño de la fuente ligeramente
+    \ttfamily % Aplica la fuente monoespaciada
+    \raggedright % Alinea el texto a la izquierda sin justificar
+    ¡No hablamos aquí de crear juegos, sino de utilizar elementos de la vida real como partes de la mecánica! \cite{nallar2015estructuraludica}.
+\end{tcolorbox}
+
+En su definición más genérica y simple, la gamificación nos habla sobre la aplicación de técnicas de diseño de juegos en entornos que nada tienen que ver con lo lúdico, como un entorno empresarial, para afectar la motivación, participación y compromiso de los actores de un proceso.
+Podemos identificar algunas formas de aplicación posibles para un proceso de gamificación\cite[XVIII. Gamificación, fundamentos. Tipos de Gamificación.]{nallar2015estructuraludica}:
+\begin{itemize}
+    \item \textbf{Externa}: Se orienta al marketing y la publicidad, y busca la fidelización de clientes. Es una forma de evolución del llamado \textit{loyalty marketing}.
+    \item \textbf{Interna}: Se orienta a la motivación de empleados y la mejora de procesos. Buscamos la mejora de la productividad y motivación desde el punto de vista de recursos humanos. Puede servir como un motivante para la adopción de nuevas prácticas y nuevos aprendizajes.
+    \item \textbf{Para Cambio de Comportamientos}: Se vuelca a la adopción de hábitos saludables, mejora en las finanzas personales y otros. En el mercado actual podemos ver ejemplos de esto en aplicaciones de entrenamiento físico como \textit{"Zombies, Run!"}, productividad personal como \textit{"HabiticaRPG"}, y otras.
+\end{itemize}
 
 % Sección 1.3: Importancia de los KPIs en DevOps
-\subsection{\textbf{Importancia de los KPIs en DevOps}}
+\subsection{\textbf{KPIs y equipos de trabajo}}
 
-\textit{Desarrollo esperado:} Se explicará qué son los \textit{KPIs} y su papel en la medición del rendimiento en equipos \textit{DevOps}. Se resaltará que \textbf{``Un dato aislado no provee contexto''}, subrayando la necesidad de analizar múltiples indicadores para obtener una visión completa.
-
-Ejemplos de \textit{KPIs} relevantes incluyen:
-
-\begin{itemize}
-    \item \textbf{Frecuencia de Despliegues:}
-    
-    \textit{Descripción:} Indica cuántas veces se realizan despliegues a producción en un periodo determinado.
-    
-    \textit{Relevancia:} Una alta frecuencia sugiere que el equipo tiene procesos ágiles y automatizados, reduciendo el \textit{gap} entre desarrollo y operaciones.
-    
-    \textit{Ejemplo:} Un equipo que despliega diariamente muestra una cultura \textit{DevOps} madura, mientras que uno que lo hace mensualmente podría enfrentar retrasos y acumulación de cambios.
-    
-    \item \textbf{Tiempo Medio de Recuperación (MTTR):}
-    
-    \textit{Descripción:} Tiempo promedio que se tarda en restaurar un servicio después de una interrupción.
-    
-    \textit{Relevancia:} Un MTTR bajo refleja una eficiente colaboración en la resolución de problemas y robustez en los procesos.
-    
-    \textit{Ejemplo:} Reducir el MTTR de horas a minutos puede mejorar significativamente la disponibilidad del servicio y la satisfacción del cliente.
-    
-    \item \textbf{Disponibilidad del Servicio (\textit{Service Uptime}):}
-    
-    \textit{Descripción:} Porcentaje de tiempo que un servicio está operativo y disponible para los usuarios.
-    
-    \textit{Relevancia:} Una alta disponibilidad es esencial para la confianza del cliente y refleja una gestión efectiva de operaciones.
-    
-    \textit{Ejemplo:} Mantener una disponibilidad del 99.9\% demuestra compromiso con la calidad y eficiencia en la gestión de infraestructuras.
-\end{itemize}
+Un \textit{KPI} puede ser identificado como un conjunto de mediciones enfocados en aspectos organizacionales de \textit{performance} críticos para el éxito de una organización\cite{heilbrunn2019gamification}.
+Si bien existe una relación entre una \textit{métrica} y un \textit{KPI}, es importante destacar para el desarrollo de este trabajo, que estos dos conceptos relacionados no son lo mismo. La diferencia radica en el impacto que genera un KPI en la organización o, como fuera el caso actual, en un equipo de trabajo DevOps, mientras que una métrica es simplemente una medición de un aspecto de un proceso. Si queremos verlo de una forma más simple, es importante recordar que \textbf{un dato aislado no provee contexto}.
 
 % Sección 2: Situación Actual y Desafíos en Equipos DevOps
 \section{\textbf{\Large Situación Actual y Desafíos en Equipos DevOps}}
 
-\textbf{Resumen:} Se analizará la situación actual de los equipos \textit{DevOps}, identificando las complicaciones existentes en la interpretación de datos y en la colaboración entre equipos.
+
 
 % Sección 2.1: Importancia de los KPIs y Desafíos en su Interpretación
 \subsection{\textbf{Importancia de los KPIs y Desafíos en su Interpretación}}

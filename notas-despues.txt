@@ -1,0 +1,30 @@
+El "jugador" está en el centro de un proceso de gamificación\cite[Chapter 2. Player Motivation]{zichermann2011gamification}, lo que nos lleva a la necesidad de entender qué es lo que motiva a las personas a participar en un juego, y cómo podemos aplicar estos conceptos. 
+
+### KPIs DevOps
+Ejemplos de \textit{KPIs} relevantes incluyen:
+
+\begin{itemize}
+    \item \textbf{Frecuencia de Despliegues:}
+    
+    \textit{Descripción:} Indica cuántas veces se realizan despliegues a producción en un periodo determinado.
+    
+    \textit{Relevancia:} Una alta frecuencia sugiere que el equipo tiene procesos ágiles y automatizados, reduciendo el \textit{gap} entre desarrollo y operaciones.
+    
+    \textit{Ejemplo:} Un equipo que despliega diariamente muestra una cultura \textit{DevOps} madura, mientras que uno que lo hace mensualmente podría enfrentar retrasos y acumulación de cambios.
+    
+    \item \textbf{Tiempo Medio de Recuperación (MTTR):}
+    
+    \textit{Descripción:} Tiempo promedio que se tarda en restaurar un servicio después de una interrupción.
+    
+    \textit{Relevancia:} Un MTTR bajo refleja una eficiente colaboración en la resolución de problemas y robustez en los procesos.
+    
+    \textit{Ejemplo:} Reducir el MTTR de horas a minutos puede mejorar significativamente la disponibilidad del servicio y la satisfacción del cliente.
+    
+    \item \textbf{Disponibilidad del Servicio (\textit{Service Uptime}):}
+    
+    \textit{Descripción:} Porcentaje de tiempo que un servicio está operativo y disponible para los usuarios.
+    
+    \textit{Relevancia:} Una alta disponibilidad es esencial para la confianza del cliente y refleja una gestión efectiva de operaciones.
+    
+    \textit{Ejemplo:} Mantener una disponibilidad del 99.9\% demuestra compromiso con la calidad y eficiencia en la gestión de infraestructuras.
+\end{itemize}
