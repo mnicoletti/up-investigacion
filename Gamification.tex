@@ -47,7 +47,7 @@ Este sector del documento será reservado para la introducción del trabajo, don
 En esta sección identificaremos los conceptos que abarcarán el total de la investigación, desde los pilares de la cultura \textit{DevOps}, identificando la importancia de una correcta visualización de los indicadores de performance, y el concepto de gamificación como herramienta de visualización. La revisión de estos conceptos permitirá definir la base teórica para la implementación de la plataforma propuesta.
 
 % Sección 1.1: Fundamentos de DevOps y Automatización
-\subsection{\textbf{Fundamentos de DevOps y Automatización}}
+\subsection{\textbf{Fundamentos de DevOps y Automatización}} \label{fundamentos-devops}
 
 \begin{tcolorbox}[colback=gray!10, colframe=black, left=2mm, right=2mm]
     \small % Reduce el tamaño de la fuente ligeramente
@@ -192,72 +192,46 @@ En primer lugar, definiremos el \textit{mapa de rewards}, que en nuestro sistema
 De la misma forma, estas métricas serán utilizadas para aumentar el nivel de experiencia de los jugadores, y permitirles subir su nivel de jugador. El promedio de niveles en equipos de trabajo será utilizado para medir el nivel de experiencia del equipo, y tratar de promover un sistema de colaboración interna entre jugadores, siguiendo la llamada teoría de \textit{cohesión de grupos}\cite{mueller2024leveraging}.
 
 % Sección 4.2: Extracción, creación y presentación de elementos gamificados
-\subsection{\textbf{Extracción, creación y presentación de elementos gamificados}}
+\subsection{\textbf{Extracción, creación y presentación de elementos gamificados}} \label{extraccion-creacion-presentacion}
 
-\textit{Desarrollo esperado:} Se describirá el proceso de extracción de datos de los procesos CI/CD y cómo estos pueden ser transformados en indicadores útiles. Se abordará la necesidad de automatización en este proceso para asegurar datos en tiempo real.
+En la cultura DevOps, la implementación de procesos automatizados tiene su centro, muy generalmente, en la utilización de pipelines\footnote{Arreglo de ciclos automatizados que compilan, construyen, prueba y despliegan código} de CI/CD\footnote{Continuous Integration/Continuous Delivery}. Por ser el corazón de la automatización de despliegues, es el punto donde centraremos la recolección de métricas de todas las herramientas que se involucran en el proceso de un pase a producción de código, y donde serán transformadas y enviadas a una plataforma de visualización.
 
-% Sección 5: Impacto en la Organización y Beneficios Esperados
-\section{\textbf{\Large Impacto en la Organización y Beneficios Esperados}}
-
-\textbf{Resumen:} Esta sección analiza las implicaciones de implementar la plataforma propuesta, incluyendo los beneficios para la organización y posibles desafíos a considerar.
-
-% Sección 5.1: Fomento de una Cultura de Innovación
-\subsection{\textbf{Fomento de una Cultura de Innovación}}
-
-\textit{Desarrollo esperado:} Se destacará cómo la gamificación y la competencia saludable pueden promover una cultura de innovación continua dentro de los equipos \textit{DevOps}.
-
-% Sección 5.2: Alineación con Objetivos Estratégicos
-\subsection{\textbf{Alineación con Objetivos Estratégicos}}
-
-\textit{Desarrollo esperado:} Se explicará cómo la información proporcionada por la plataforma ayuda a los líderes a alinear las acciones de los equipos con los objetivos estratégicos de la organización.
-
-% Sección 5.3: Reducción del Gap entre Equipos
-\subsection{\textbf{Reducción del \textit{Gap} entre Equipos}}
-
-\textit{Desarrollo esperado:} Se analizará cómo la plataforma ayuda a reducir la brecha de conocimiento entre desarrollo y operaciones, y entre niveles de experiencia, proveyendo al liderazgo de una visión más completa y facilitando la provisión de herramientas de apoyo en \textit{onboarding} y capacitación.
-
-% Sección 6: Retos y Consideraciones para la Implementación
-\section{\textbf{\Large Retos y Consideraciones para la Implementación}}
-
-\textbf{Resumen:} Se identificarán posibles desafíos en la implementación y se propondrán soluciones.
-
-% Sección 6.1: Resistencia al Cambio y Cultura Organizacional
-\subsection{\textbf{Resistencia al Cambio y Cultura Organizacional}}
-
-\textit{Desarrollo esperado:} Se abordarán las posibles resistencias internas y cómo superarlas.
-
-Ejemplo:
-
+Para este desarrollo teórico, hemos elegido algunas de las herramientas más conocidas de los procesos de automatización y desarrollo de código: 
 \begin{itemize}
-    \item \textbf{Resistencia por Rutinas Arraigadas}
-    
-    \textit{Descripción:} Preferencia por mantener métodos tradicionales conocidos.
-    
-    \textit{Superación:} Involucrar a los empleados en el proceso de cambio, escuchando sus preocupaciones y ajustando el plan según sea necesario.
+    \item \textbf{Jenkins}\cite{jenkins}: Como herramienta de pipeline.
+    \item \textbf{SonarQube}\cite{sonarqube}: Para la medición de calidad de código.
+    \item \textbf{Git}\cite{git}: En cualquiera de sus presentaciones o adaptaciones, como repositorio de código y controlador del flujo de trabajo.
+    \item \textbf{Atlassian Jira}\cite{jira}: Para la gestión de tareas y seguimiento de proyectos, vinculado estrechamente con el flujo de trabajo de los equipos de desarrollo, el estado de los proyectos y la aplicación de políticas Agile.
+\end{itemize} 
+
+Estas herramientas, en su conjunto, nos permitirán extraer una serie de métricas que serán utilizadas para la creación de los elementos gamificados en forma de \textit{KPIs} que serán presentados en la plataforma.
+
+El objetivo principal será el de centralizar estas métricas mediante el desarrollo de módulos dentro del sistema de pipelines, que sean capaces de recolectar las distintas situaciones que presentan las herramientas mencionadas, y transformarlas en elementos lúdicos que pueden ser calculados en base a puntuaciones tabuladas previamente.
+
+El siguiente paso, es la selección. Habiendo acotado la lista de herramientas con las que vamos a desempeñar la investigación, podemos definir una serie de recolecciones basadas en puntos específicos de los principios o pilares de \textit{DevOps} que hemos identificado en la sección \ref{fundamentos-devops}. Entre algunas de las métricas propuestas, podemos mencionar:
+\begin{itemize}
+    \item \textbf{Tiempo de despliegue}: Tiempo que toma un cambio en el código en ser desplegado en producción.
+    \item \textbf{Calidad de código}: Medida de la calidad del código en base a estándares de calidad predefinidos.
+    \item \textbf{Cantidad de errores en producción}: Cantidad de errores que se presentan en producción.
+    \item \textbf{Cantidad de despliegues}: Cantidad de despliegues realizados en un período de tiempo.
+    \item \textbf{Tiempo de respuesta}: Tiempo que toma una aplicación en responder a una petición o incidente según su nivel de prioridad o severidad respectivo.
 \end{itemize}
 
-% Sección 6.2: Implicaciones Éticas y de Privacidad
-\subsection{\textbf{Implicaciones Éticas y de Privacidad}}
+Estas simples métricas pueden ser utilizadas para definir una serie de puntos de experiencia y otras métricas lúdicas internas al sistema gamificado, almacenadas en una base de datos central a definir, y que serán generadoras de los elementos necesarios: niveles de jugador, logros, medallas.
 
-\textit{Desarrollo esperado:} Se analizarán consideraciones éticas relacionadas con la competencia entre equipos y el manejo de datos sensibles, asegurando que la plataforma promueva un entorno de trabajo positivo.
+Finalmente, el muestreo de estos elementos debe ser realizado de forma integral y en tiempo real, para poder realizar las evaluaciones y recompensas de la forma más inmediata, justa y equitativa posible. En nuestro teórico sistema, buscamos mostrar todos los \textit{KPIs} obtenidos mediante gráficos, insignias, tablas de clasificación personalizadas y colectivas.
 
-% Sección 6.3: Escalabilidad y Mantenimiento de la Plataforma
-\section{\textbf{\Large Conclusiones y Trabajo Futuro}}
-Se procederá a la redacción de las conclusiones y las posibles líneas de trabajo futuro.
+Como un punto adicional, y para poder mantener la motivación de los jugadores, se pueden implementar sistemas de recompensas sociales, para el reconocimiento entre pares y un ambiente de trabajo que fomente interacciones positivas y la motivación entre pares.
 
-\subsection{\textbf{Escalabilidad y Mantenimiento de la Plataforma}}
+\section{\textbf{\Large Impacto, beneficios esperados y posibles desafíos}}
 
-\textit{Desarrollo esperado:} Se analizarán los aspectos técnicos para garantizar el funcionamiento continuo y la adaptación futura de la plataforma.
+Estudios previos han desarrollado investigaciones sobre herramientas de gamificación en equipos \textit{DevOps}, y han obtenido una serie de resultados que nos permitirán explorar si es posible extender estos hacia otras prácticas. Parte del impacto esperado recae en\cite{ayoup2022achievement}: Reducción en las tareas manuales en el proceso de despliegue, mejora en la promoción de buenas prácticas de trabajo, y una mejora en la comunicación entre los miembros del equipo, entre otros mencionados.
 
-Herramientas de código abierto como base:
+Nuestro interés, es el de, no solo modificar la motivación que llevó a estos resultados previos, sino también la de mejorar la comunicación entre los miembros del equipo y los líderes de la organización. La incorporación del factor de liderazgo, y la mejora de la observabilidad de algunos de los puntos mencionados en la sección \ref{extraccion-creacion-presentacion}, son el objetivo principal de nuestro desarrollo. La aplicación de logros y medallas deben ser un motor para los líderes, no para promover la competencia desleal entre miembros y equipos, sino la de promover la mejora continua, identificar puntos de falla, conseguir la fidelización de los miembros del equipo y la mejora de la toma de decisiones acerca de la coordinación de los proyectos.
 
-\begin{itemize}
-    \item \textbf{Integración con Prometheus y Grafana}
-    
-    \textit{Descripción:} Utilizar Prometheus para recopilar métricas y Grafana para visualizarlas.
-    
-    \textit{Aplicación:} Crear \textit{dashboards} gamificados sobre Grafana, incorporando \textit{plugins} o desarrollos que añadan elementos lúdicos.
-\end{itemize}
+Hay algunos desafíos que se presentan en la implementación de sistemas lúdicos, y que no solo se presentan de forma técnica, sino también en lo que sucede en cualquier adopción de nuevas culturas: la resistencia al cambio. No solo se debe considerar la resistencia por ser un sistema nuevo, sino la que proviene de un sesgo que puede ser iniciado por una franja etaria que no se sienta cómoda con la utilización de sistemas lúdicos, o por la falta de conocimiento de los beneficios que puede traer la implementación de un sistema de gamificación en un entorno de trabajo\cite[Quinta Parte: Gamificación - Cuando la gamificación es inútil]{nallar2015estructuraludica}.
+
+\section{\textbf{\Large Conclusiones}}
 
 % Sección de Citas. Esta sección se completará con la investigación bibliográfica una vez finalizado el paper, y se incluirá en la versión final del trabajo.
 
