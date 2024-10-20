@@ -44,7 +44,7 @@ Este sector del documento será reservado para la introducción del trabajo, don
 % Sección 1: Marco Teórico
 \section{\textbf{\Large Marco Teórico}}
 
-En esta sección identificaremos los conceptos que abarcarán el total de la investigación, desde los pilares de la cultura \textit{DevOps}, identificando la importancia de una correcta visualización de los indicadores de performance, y el concepto de gamificación como herramienta de visualización. La revisión de estos conceptos permitirá definir la base teórica para la implementación de la plataforma propuesta.
+En esta sección identificaremos los conceptos que abarcarán el total de la investigación: los pilares de la cultura \textit{DevOps}, la importancia de la obtención de métricas eficaces, y el concepto de gamificación como herramienta de visualización. La revisión de estos conceptos permitirá definir la base teórica para la implementación de la plataforma propuesta.
 
 % Sección 1.1: Fundamentos de DevOps y Automatización
 \subsection{\textbf{Fundamentos de DevOps y Automatización}} \label{fundamentos-devops}
@@ -58,18 +58,20 @@ En esta sección identificaremos los conceptos que abarcarán el total de la inv
 
 Si bien hoy estamos acostumbrados a describirlo como un conjunto de herramientas con nombre propio orientadas a la automatización de procesos, \textit{DevOps} es una cultura de trabajo basada en la colaboración entre todos los miembros de los equipos de desarrollo y operaciones, orientada en la comunicación, la mejora continua y la eficiencia de procesos.
 
-De acuerdo con Gene Kim et al. en sus libros \textit{The DevOps Handbook} \cite{kim2021devops} y \textit{The Phoenix Project} \cite{kim2018phoenix}, es posible identificar tres principios bajo los que enmarcar todos los patrones y conductas que se observan en la adopción de \textit{DevOps}:
+De acuerdo con Gene Kim et al. en sus libros \textit{The DevOps Handbook} \cite{kim2021devops} y \textit{The Phoenix Project} \cite{kim2018phoenix}, es posible identificar tres principios bajo los que basar los comportamientos a adoptar en la cultura \textit{DevOps}:
 \begin{enumerate}
-    \item \textbf{El principio del flujo}\cite[Part 1.2: The First Way: The Principles of Flow]{kim2021devops}: se busca disminuir el tiempo en la puesta en producción de un cambio, para lo que buscamos visualizar el trabajo que se está realizando, limitar el \textbf{WIP}\footnote{Work In Process (Trabajo en Proceso)} y reducir el tamaño de "lotes" de trabajo.
+    \item \textbf{El principio del flujo}\cite[Part 1.2: The First Way: The Principles of Flow]{kim2021devops}: se basa en disminuir el tiempo en la puesta en producción de un cambio, para lo que buscamos visualizar el trabajo que se está realizando, limitar el \textbf{WIP}\footnote{Work In Process (Trabajo en Proceso)} y reducir el tamaño de ``lotes'' de trabajo.
     \item \textbf{El principio del feedback}\cite[Part 1.3: The Second Way: The Principles of Feedback]{kim2021devops}: Al trabajar con sistemas complejos, cobra especial importancia una retroalimentación rápida y efectiva, aumentando la cantidad y calidad de información que permita identificar y hasta predecir posibles fallas. Busca atacar los problemas al mismo tiempo que están ocurriendo para construir conocimiento constantemente y optimizar cada proceso.
     \item \textbf{El principio de la experimentación y aprendizaje continuo}\cite[Part 1.4: The Third Way: The Principles of Continual Learning and Experimentation]{kim2021devops}: trata sobre la creación de una cultura donde la experimentación y el aprendizaje continuo sean la norma. Entre muchos otros formatos, este último principio refleja específicamente el papel que debe tener un líder, no solo como hacedor de objetivos y roadmaps, sino también como facilitador del aprendizaje continuo.
 \end{enumerate}
 
 % Al avanzar en el paper es posible que esta sección desaparezca y termine en la introducción.
+Los tres principios enmarcan todas las pautas de la cultura DevOps: un flujo de trabajo eficiente, una gran cantidad de feedback para disminuir los tiempos de respuesta ante incidentes, y la busqueda del aprendizaje continuo que promueva la continua actualización de los conocimientos de las personas de un equipo. 
+
 Si bien cada principio funciona de forma autónoma, podemos ver como cada uno juega un papel de retroalimentación, no solo dentro de cada uno de ellos, sino también entre cada principio en una forma de interacción constante. 
 
 % Sección 1.2: Métricas en un entorno DevOps
-\subsection{\textbf{Métricas en un entorno DevOps}}
+\subsection{\textbf{Métricas en un entorno DevOps}} \label{marco-metricas}
 
 \begin{tcolorbox}[colback=gray!10, colframe=black, left=2mm, right=2mm]
     \small % Reduce el tamaño de la fuente ligeramente
@@ -80,9 +82,9 @@ Si bien cada principio funciona de forma autónoma, podemos ver como cada uno ju
 
 En el contexto de los principios mencionados, es fundamental para el feedback de cada uno de los procesos de los principios de \textit{DevOps}, una obtención de las métricas correctas. 
 
-Para poder orientarnos a la mejora continua, es importante diseñar sistemas para que se encuentren en constante creación de telemetría, con una recolección centralizada y automatización en su visualización \cite[Part IV. 14.]{kim2021devops}.
+Para poder orientarnos a la mejora continua, es importante diseñar sistemas automatizados que generen telemetría, con una recolección centralizada y un correcto muestreo de todos los datos obtenidos\cite[Part IV. 14.]{kim2021devops}.
 
-Por supuesto, la información de interés no es la misma para todos los actores dentro de un proceso de trabajo y, dependiendo del momento en el ciclo de vida de un proyecto\cite{brunnert2015performance}, la calidad de los mismos. En el caso de lo relacionado a \textit{DevOps} medimos: performance, carga, disponibilidad, cantidad de errores, tiempo de respuesta, despliegues, entre otros.
+Es importante destacar una máxima en cualquier análisis de datos: \textbf{un dato aislado sin un contexto apropiado es inútil}. La información de interés no es la misma para todos los actores dentro de un proceso de trabajo y, dependiendo del momento en el ciclo de vida de un proyecto\cite{brunnert2015performance}, la calidad de los mismos. En el caso de lo relacionado a \textit{DevOps} medimos: performance, carga, disponibilidad, cantidad de errores, tiempo de respuesta, despliegues, entre otros.
 
 % Sección 1.3: Principios de Gamificación
 \subsection{\textbf{Principios de Gamificación e interacción con KPIs}}
@@ -97,27 +99,30 @@ En su definición más genérica y simple, la gamificación nos habla sobre la a
 
 Tal puede ser el caso del mundo de la salud, las finanzas o la educación, así como también en un equipo de trabajo \textit{DevOps}.
 
-Es importante destacar una máxima en cualquier análisis de datos: \textbf{un dato aislado sin contexto es inútil}. Las métricas mencionadas, por si solas, no proveen de la información necesaria para, por ejemplo, identificar las brechas en conocimiento entre distintos miembros de un equipo de trabajo. Por lo que pretendemos dar un aspecto lúdico a estas métricas, combinándolas y transformándolas en \textit{KPIs} gamificados. 
+Las métricas mencionadas en la sección \ref{marco-metricas}, por si solas, no proveen de la información necesaria para, por ejemplo, identificar las brechas en conocimiento entre distintos miembros de un equipo de trabajo. Lo que pretendemos en nuestra hipótesis es, una vez más, basarnos en la máxima de que \textbf{un dato aislado sin un contexto apropiado es inútil}, generar dicho contexto bajo un aspecto lúdico, combinándo todas las métricas seleccionadas y transformándolas en \textit{KPIs} gamificados. 
 
 % Sección 2: Situación Actual y Desafíos en Equipos DevOps
 \section{\textbf{\Large Situación Actual y Desafíos en Equipos DevOps}}
 
-En equipos \textit{DevOps} experimentados, los tres principios mencionados ya han superado la etapa de adopción y todas sus dificultades, y se encuentran en un cierto estado de madurez. Sin embargo, aún en este nivel de formación, identificamos algunos de los desafíos que podemos enfrentar con la aplicación de nuestra plataforma.
-\begin{itemize}
-    \item El onboarding de nuevos integrantes en un equipo de trabajo.
-    \item La posible brecha de conocimiento entre los equipos de desarrollo y operaciones, y entre los niveles de experiencia.
-    \item La correcta comunicación de estos datos a los mandos medios y líderes de la organización.
-\end{itemize}
+En equipos \textit{DevOps} experimentados, los tres principios mencionados ya han superado la etapa de adopción y todas sus dificultades, y se encuentran en un cierto estado de madurez. Sin embargo, aún en este alto nivel de adopción podemos encontrar ciertas dificultades que pretenderemos abordar mediante nuestra propuesta:
 
-Sumados a estos puntos, las herramientas, procesos y buenas prácticas que se utilizan en la ingeniería de software moderna se encuentran en estados de evolución constante \cite{ayoup2022achievement}. No es complejo imaginar que, con este constante conocimiento en movimiento, toda métrica o KPI evoluciona a su vez, y se debe ajustar la forma en que se forman, interpretan y comunican estos datos.
+\begin{enumerate}
+    \item El onboarding de nuevos integrantes en un equipo de trabajo ya formado y con un alto conocimiento de la cultura interna.
+    \item Las posible brechas o gaps de conocimiento entre los equipos de desarrollo y operaciones, y entre los niveles de experiencia de los distintos integrantes de un mismo equipo.
+    \item La correcta comunicación de lo obtenido en los primeros dos puntos a los líderes de la organización a fin de que tomen cartas en el asunto.
+\end{enumerate}
+
+Sumados a estos puntos, las herramientas, procesos, tecnologías y buenas prácticas que se utilizan en la ingeniería de software moderna se encuentran en un estado de evolución constante \cite{ayoup2022achievement}, por lo que no es complejo imaginar que, las métricas que puedan obtenerse de las mismas evolucionen a su par, complicando la interpretación de las mismas si no son estandarizadas de forma correcta.
 
 % Sección 2.1: Brecha entre Equipos de Desarrollo y Operaciones
 \subsection{\textbf{Brecha entre Equipos de Desarrollo y Operaciones}}
 
 Desde su concepción, \textit{DevOps} busca la eliminación de las barreras entre los equipos de desarrollo y operaciones, y la creación de un entorno de trabajo colaborativo y eficiente. 
 Sin embargo, es incorrecto asumir que un equipo que ha adoptado la cultura \textit{DevOps} haya eliminado de forma total las posibles brechas de conocimiento, y que cada miembro del equipo sea ahora una unidad de trabajo independiente, autosuficiente y capaz de realizar cualquier tarea. 
-\\En cambio, y si bien ciertos aspectos del conocimiento de la ingeniería de software son compartidos por todos los miembros del equipo (como ser el mismo manifiesto Agile\cite{amaro2024devops}, del cual se considera a \textit{DevOps} como una evolución de sus principios hacia la operación e infraestructura\cite[Part I. The Three Ways]{kim2021devops}), es posible que ciertos aspectos de la operación y la infraestructura sean desconocidos para los miembros del equipo de desarrollo, y viceversa.
-\\Además de estos aspectos, tenemos que considerar que dentro de un mismo equipo o disciplina, la experiencia individual de cada miembro puede variar y, a su vez, afectar colectivamente el rendimiento del equipo.
+
+En cambio, y si bien ciertos aspectos del conocimiento de la ingeniería de software son compartidos por todos los miembros del equipo (como ser el mismo manifiesto Agile\cite{amaro2024devops}, del cual se considera a \textit{DevOps} como una evolución de sus principios hacia la operación e infraestructura\cite[Part I. The Three Ways]{kim2021devops}), es posible que ciertos aspectos de la operación y la infraestructura sean desconocidos para los miembros del equipo de desarrollo, y viceversa.
+
+Además de estos aspectos, tenemos que considerar que dentro de un mismo equipo o disciplina, la experiencia individual de cada miembro puede variar y, a su vez, afectar colectivamente el rendimiento del equipo.
 
 Entonces, \textit{¿cuales son las herramientas que una organización puede adoptar para identificar y cerrar estas brechas de conocimiento en sus equipos de trabajo, sin sacrificar la eficiencia y productividad a las viejas prácticas de la burocracia y la microgestión?}
 
@@ -129,10 +134,12 @@ Un desarrollo e implementación correcto y efectivo de un sistema de \textit{KPI
     \item Asociación entre el staff, proveedores y clientes.
     \item Trasferencia del poder a la primera línea de trabajo.
     \item Medir y reportar lo que importa.
-    \item Alineación de medidas de performance a la estrategia a través de los CSF\footnote{Critical Success Factors, Factores Críticos de éxito}.
+    \item Alineamiento de medidas de performance a la estrategia a través de los CSF\footnote{Critical Success Factors, Factores Críticos de éxito}.
 \end{itemize}
+
 El idioma tecnológico no es el mismo que el idioma de los negocios, y es común que los líderes en la organización carezcan de la experiencia técnica para interpretar los datos que la línea de trabajo presenta, a la vez que la fuerza de trabajo técnica carece de la experiencia en la interpretación de los datos que los líderes puedan necesitar.
-\\Y nos encontramos entonces con la ruptura en la aplicación de las piedras fundacionales de Parmenter. La falta de entendimiento lleva a una mala asociación entre los actores; la primera línea de trabajo carece de las herramientas para hacer entender sus medidas de performance, evitando reportar lo que es realmente importante para todos los involucrados.
+
+Así nos encontramos con factores que llevan a la ruptura en la aplicación de las piedras fundacionales de Parmenter. La \textit{falta de entendimiento} lleva a una mala asociación entre los actores; la primera línea de trabajo \textit{carece de las herramientas} para hacer entender sus medidas de performance, evitando reportar lo que es realmente importante para todos los involucrados.
 
 Es aquí que podemos realizar la pregunta: \textit{¿Cuales son las medidas que una organización puede implementar para mejorar la interpretación de forma bidireccional y asegurar que los \textit{KPI} generados sean provistos de un contexto y una motivación para la mejora\cite[Chapter 1. Key Performance Indicators]{parmenter2015key}.?}
 
@@ -145,6 +152,7 @@ En las secciones previas hemos identificado una serie de interrogantes que son e
     \item \textit{¿Cuáles son las herramientas que una organización puede adoptar para identificar y cerrar las brechas de conocimiento dentro y desde los equipos de trabajo con una cultura DevOps sólida?}
     \item \textit{¿Cuales son las medidas que una organización puede implementar para mejorar la comunicación de medidas claves de performance entre líderes y el equipo técnico?}
 \end{itemize}
+
 La respuesta a la que intentamos dar forma es la de la utilización de la \textit{Gamificación} como facilitador primordial del entendimiento de todos los indicadores o métricas, y generadora de motivación y compromiso en los equipos de trabajo.
 
 En esta sección, además de identificar elementos de gamificación y conceptos que nos llevarán a la formación de una hipotética plataforma de trabajo, buscaremos identificar que elementos meramente lúdicos pueden ser utilizados para obtener las proporciones justas de dos conceptos que, a priori, parecieran opuestos: la colaboración y la competencia, siempre vistas desde un punto de vista saludable y constructivo como es lo que puede promover un juego de mesa o un videojuego.
@@ -170,9 +178,9 @@ En la próxima sección, identificaremos cuales son los posibles actores, defini
 % Sección 4: Implementación y Funcionamiento
 \section{\textbf{\Large Implementación y Funcionamiento}}
 
-Para iniciar el diseño, tenemos que considerar una serie de "verdades" sobre las herramientas que vamos a utilizar: \textbf{la gamificación es una guía} que debe permitir a cada miembro del equipo de trabajo entender su propia performance y la de sus compañeros, a la vez que debe permitir una interacción con fines de diversión. Cualquier desbalance en alguno de los dos sentidos puede llevar al fracaso de la metodología\cite[Quinta Parte: Gamificación - De los desafíos y misiones]{nallar2015estructuraludica}.
+Antes de dar inicio al diseño de pantallas de muestra, tenemos que considerar una serie de ``verdades'' sobre las herramientas que vamos a utilizar: \textbf{la gamificación es una guía} que debe permitir a cada miembro del equipo de trabajo entender su propia performance y la de sus compañeros, a la vez que debe permitir una interacción con fines de diversión. Cualquier desbalance en alguno de los dos sentidos puede llevar al fracaso de la metodología\cite[Quinta Parte: Gamificación - De los desafíos y misiones]{nallar2015estructuraludica}.
 
-Para poder llevar a cabo el diseño de nuestra plataforma de gamificación, nos hemos planteado una serie de pasos guía que deben permitirnos llevar a cabo su implementación:
+Definimos una serie de pasos guía que deben permitirnos llevar a cabo nuestra implementación teórica:
 
 \begin{itemize}
     \item La \textit{definición de los elementos de análisis} derivados de las \textit{métricas} que son de interés tanto para el equipo, como para los líderes de la organización.
@@ -187,7 +195,7 @@ En estudios relacionados, se ha demostrado que el primer paso de la implementaci
 
 Para que podamos llevar a cabo la teórica implementación de nuestra plataforma, debemos identificar los elementos lúdicos que harán al sistema visible y atractivo para generar una primera motivación intrínseca en los miembros del equipo. La motivación extrínseca tendrá forma en las recompensas que recibirán los miembros del equipo, cualquiera sea el resultado de su performance. En este sentido, es importante definir nuestro objetivo como el de una mesa de juego de D\&D\footnote{Dungeons \& Dragons}, donde todos ganan construyendo una historia en conjunto.
 
-En primer lugar, definiremos el \textit{mapa de rewards}, que en nuestro sistema teórico estará compuesto elementos como logros (normalmente llamados en el ámbito de los videojuegos como trophies o achievements), logros colectivos, y un sistema de nivel de jugadores individual y grupal. Los logros, pueden tomar forma de medallas, estrellas, "títulos" de jugador, o cualquier otro elemento que pueda ser presentado de forma visual y atractiva. En la próxima sección, definiremos una serie de logros basados en métricas a extraer de algunos de los servicios más comunes en un entorno de trabajo \textit{DevOps}.
+En primer lugar, definiremos el \textit{mapa de rewards}, que en nuestro sistema teórico estará compuesto elementos como logros (normalmente llamados en el ámbito de los videojuegos como trophies o achievements), logros colectivos, y un sistema de nivel de jugadores individual y grupal. Los logros, pueden tomar forma de medallas, estrellas, ``títulos'' de jugador, o cualquier otro elemento que pueda ser presentado de forma visual y atractiva. En la próxima sección, definiremos una serie de logros basados en métricas a extraer de algunos de los servicios más comunes en un entorno de trabajo \textit{DevOps}.
 
 De la misma forma, estas métricas serán utilizadas para aumentar el nivel de experiencia de los jugadores, y permitirles subir su nivel de jugador. El promedio de niveles en equipos de trabajo será utilizado para medir el nivel de experiencia del equipo, y tratar de promover un sistema de colaboración interna entre jugadores, siguiendo la llamada teoría de \textit{cohesión de grupos}\cite{mueller2024leveraging}.
 
@@ -196,7 +204,7 @@ De la misma forma, estas métricas serán utilizadas para aumentar el nivel de e
 
 En la cultura DevOps, la implementación de procesos automatizados tiene su centro, muy generalmente, en la utilización de pipelines\footnote{Arreglo de ciclos automatizados que compilan, construyen, prueba y despliegan código} de CI/CD\footnote{Continuous Integration/Continuous Delivery}. Por ser el corazón de la automatización de despliegues, es el punto donde centraremos la recolección de métricas de todas las herramientas que se involucran en el proceso de un pase a producción de código, y donde serán transformadas y enviadas a una plataforma de visualización.
 
-Para este desarrollo teórico, hemos elegido algunas de las herramientas más conocidas de los procesos de automatización y desarrollo de código: 
+Para este desarrollo, hemos elegido algunas de las herramientas más conocidas de los procesos de automatización y desarrollo de código: 
 \begin{itemize}
     \item \textbf{Jenkins}\cite{jenkins}: Como herramienta de pipeline.
     \item \textbf{SonarQube}\cite{sonarqube}: Para la medición de calidad de código.
@@ -227,7 +235,7 @@ Como un punto adicional, y para poder mantener la motivación de los jugadores, 
 
 Estudios previos han desarrollado investigaciones sobre herramientas de gamificación en equipos \textit{DevOps}, y han obtenido una serie de resultados que nos permitirán explorar si es posible extender estos hacia otras prácticas. Parte del impacto esperado recae en\cite{ayoup2022achievement}: Reducción en las tareas manuales en el proceso de despliegue, mejora en la promoción de buenas prácticas de trabajo, y una mejora en la comunicación entre los miembros del equipo, entre otros mencionados.
 
-Nuestro interés, es el de, no solo modificar la motivación que llevó a estos resultados previos, sino también la de mejorar la comunicación entre los miembros del equipo y los líderes de la organización. La incorporación del factor de liderazgo, y la mejora de la observabilidad de algunos de los puntos mencionados en la sección \ref{extraccion-creacion-presentacion}, son el objetivo principal de nuestro desarrollo. La aplicación de logros y medallas deben ser un motor para los líderes, no para promover la competencia desleal entre miembros y equipos, sino la de promover la mejora continua, identificar puntos de falla, conseguir la fidelización de los miembros del equipo y la mejora de la toma de decisiones acerca de la coordinación de los proyectos.
+Nuestro interés, es el de, no solo reproducir estas técnicas de motivación que desarrollaron los resultados ya previamente obtenidos, sino además proveerotras técnicas de mejora para aumentar y ordenar la comunicación entre los miembros del equipo y los líderes de la organización. La incorporación del factor de liderazgo, y la mejora de la observabilidad de algunos de los puntos mencionados en la sección \ref{extraccion-creacion-presentacion}, son el objetivo principal de nuestro desarrollo. La aplicación de logros o medallas deben ser un motor para los líderes, no para promover la competencia desleal entre miembros y equipos, sino la de promover la mejora continua, identificar puntos de falla, conseguir la fidelización de los miembros del equipo y la mejora de la toma de decisiones acerca de la coordinación de los proyectos.
 
 Hay algunos desafíos que se presentan en la implementación de sistemas lúdicos, y que no solo se presentan de forma técnica, sino también en lo que sucede en cualquier adopción de nuevas culturas: la resistencia al cambio. No solo se debe considerar la resistencia por ser un sistema nuevo, sino la que proviene de un sesgo que puede ser iniciado por una franja etaria que no se sienta cómoda con la utilización de sistemas lúdicos, o por la falta de conocimiento de los beneficios que puede traer la implementación de un sistema de gamificación en un entorno de trabajo\cite[Quinta Parte: Gamificación - Cuando la gamificación es inútil]{nallar2015estructuraludica}.
 
